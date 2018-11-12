@@ -37,12 +37,28 @@ $(function () {
             }
             ,
             {
+                name: 'ตั้งค่าระบบ',
+                link: '#',
+                sub: [
+                    {
+                        name: 'ตั้งค่าเวลาเดินรถ',
+                        link: 'truck_plan.html',
+                        sub: null
+                    }
+                ]
+            }
+            ,
+            {
                 name: 'ข้อมูลพื้นฐาน',
                 link: '#',
                 sub: [
                     {
                         name: 'ประเภทคำสั่งซื้อ',
                         link: 'order_type.html',
+                        sub: null
+                    },{
+                        name: 'ประเภทสินค้า',
+                        link: 'product_type.html',
                         sub: null
                     },{
                         name: 'รถบรรทุกสินค้า',
@@ -55,29 +71,6 @@ $(function () {
                     }
                 ]
             }
-            //            ,{
-            //                name: 'Motuary Details',
-            //                link: 'new-motuary_details.html',
-            //                sub: null
-            //            }
-
-            // ,{
-            //     name: 'England',
-            //     link: '1',
-            //     sub: [{
-            //         name: 'Arsenal',
-            //         link: '0-0',
-            //         sub: null
-            //     }, {
-            //         name: 'Liverpool',
-            //         link: '0-1',
-            //         sub: null
-            //     }, {
-            //         name: 'Manchester United',
-            //         link: '0-2',
-            //         sub: null
-            //     }]
-            // }
         ]
     };
 
