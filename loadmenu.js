@@ -1,7 +1,17 @@
 $(function () {
     var data = {
         menu: [
-            {
+          {
+              name: 'ผู้ใช้งาน',
+              link: '#',
+              sub: [
+                  {
+                      name: 'ข้อมูลผุ้ใช้งาน',
+                      link: 'profile.html',
+                      sub: null
+                  }
+              ]
+          }, {
                 name: 'คำสั่งซื้อ',
                 link: 'customer_group.html',
                 sub: null
@@ -96,7 +106,7 @@ $(function () {
             str +=
                 `<li class="d-flex flex-column">
                     <a class="nav-link" href="#tables` + key + `" aria-expanded="false" class="nav-link collapsed" data-toggle="collapse">
-                        <i class="nav-icon fas fa-cogs"></i> 
+                        <i class="nav-icon fas fa-cogs"></i>
                         <p>` + value.name + `
                             <i class="fa fa-sort-desc submenu-toggle"></i>
                         </p>
