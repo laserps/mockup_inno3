@@ -1,64 +1,49 @@
 $(function () {
     var data = {
         menu: [
-          {
-              name: 'ผู้ใช้งาน',
-              link: '#',
-              sub: [
-                  {
-                      name: 'ข้อมูลผุ้ใช้งาน',
-                      link: 'profile.html',
-                      sub: null
-                  }
-              ]
-          }, {
-                name: 'คำสั่งซื้อ',
-                link: 'customer_group.html',
-                sub: null
-            }, {
-                name: 'ระบบบันทึกการส่งสินค้า',
-                link: 'customer_group.html',
-                sub: null
-            },
             {
+                name: 'เข้าสู่ระบบ',
+                link: 'login.html',
+                sub: null
+            },{
+                name: 'คำสั่งซื้อ',
+                link: 'order.html',
+                sub: null
+            },{
+                name: 'ระบบบันทึกการส่งสินค้า',
+                link: 'order_send.html',
+                sub: null
+            },{
                 name: 'ระบบจัดการสินค้า',
                 link: 'product.html',
                 sub: null
-            }, {
-                name: 'ระบบจัดการบัญชี',
-                link: 'account.html',
-                sub: null
-            }, {
-                name: 'ระบบจัดการกลุ่มลูกค้า',
-                link: 'customer_group.html',
-                sub: null
-            }, {
-                name: 'ระบบจัดการกลุ่มผู้ใช้งาน',
-                link: 'customer_group.html',
-                sub: null
-            }, {
-                name: 'ระบบจัดการผู้ใช้งาน',
-                link: 'customer_group.html',
-                sub: null
             },{
-                name: 'ระบบจัดการตารางเวลาส่งสินค้า',
-                link: 'customer_group.html',
-                sub: null
-            }
-            ,
-            {
                 name: 'ตั้งค่าระบบ',
                 link: '#',
                 sub: [
                     {
-                        name: 'ตั้งค่าเวลาเดินรถ',
-                        link: 'truck_plan.html',
+                        name: 'แก้ไขข้อมูลส่วนตัว',
+                        link: 'editprofile.html',
+                        sub: null
+                    },{
+                        name: 'ระบบจัดการกลุ่มผู้ใช้งาน',
+                        link: 'user_group.html',
+                        sub: null
+                    },{
+                        name: 'ระบบจัดการผู้ใช้งาน',
+                        link: 'user.html',
+                        sub: null
+                    },{
+                        name: 'ระบบจัดการตารางเวลาส่งสินค้า',
+                        link: '#',
+                        sub: null
+                    },{
+                        name: 'กำหนดเวลาเดินรถ',
+                        link: '#',
                         sub: null
                     }
                 ]
-            }
-            ,
-            {
+            },{
                 name: 'ข้อมูลพื้นฐาน',
                 link: '#',
                 sub: [
@@ -76,7 +61,7 @@ $(function () {
                         sub: null
                     },{
                         name: 'PAYMENT GATEWAY',
-                        link: 'bank.html',
+                        link: 'payment.html',
                         sub: null
                     }
                 ]
@@ -105,13 +90,13 @@ $(function () {
         } else {
             str +=
                 `<li class="d-flex flex-column">
-                    <a class="nav-link" href="#tables` + key + `" aria-expanded="false" class="nav-link collapsed" data-toggle="collapse">
+                    <a class="nav-link" href="#tables` + key + `" aria-expanded="true" class="nav-link" data-toggle="collapse">
                         <i class="nav-icon fas fa-cogs"></i>
                         <p>` + value.name + `
                             <i class="fa fa-sort-desc submenu-toggle"></i>
                         </p>
                     </a>
-                    <div class="collapse" id="tables` + key + `" role="navigation" aria-expanded="false">
+                    <div class="collapse show" id="tables` + key + `" role="navigation" aria-expanded="true">
                         <ul class="nav flex-column ps-container ps-theme-default">`
             $.each(value.sub, function (keyin, valuein) {
                 str +=
