@@ -6,19 +6,25 @@ $(function () {
                 link: 'login.html',
                 sub: null
             },{
-                name: 'คำสั่งซื้อ',
-                link: 'order.html',
-                sub: null
+                name: 'Back Office',
+                link: '#',
+                sub: [
+                    {
+                        name: 'คำสั่งซื้อ',
+                        link: 'order.html',
+                        sub: null
+                    },{
+                        name: 'ระบบบันทึกการส่งสินค้า',
+                        link: 'order_send.html',
+                        sub: null
+                    },{
+                        name: 'ระบบจัดการสินค้า',
+                        link: 'product.html',
+                        sub: null
+                    },
+                ]
             },{
-                name: 'ระบบบันทึกการส่งสินค้า',
-                link: 'order_send.html',
-                sub: null
-            },{
-                name: 'ระบบจัดการสินค้า',
-                link: 'product.html',
-                sub: null
-            },{
-                name: 'ตั้งค่าระบบ',
+                name: 'ระบบสมาชิก',
                 link: '#',
                 sub: [
                     {
@@ -34,12 +40,44 @@ $(function () {
                         link: 'user.html',
                         sub: null
                     },{
+                        name: 'ระบบเติมเครดิต',
+                        link: 'payment.html',
+                        sub: null
+                    }
+                ]
+            },{
+                name: 'ระบบจัดการสินค้า',
+                link: '#',
+                sub: [
+                    {
+                        name: 'ระบบจัดการสินค้า',
+                        link: 'product.html',
+                        sub: null
+                    },{
+                        name: 'ระบบตรวจสอบยอดเข้าออกสินค้า',
+                        link: 'product_transaction.html',
+                        sub: null
+                    },{
+                        name: 'ประเภทสินค้า',
+                        link: 'product_type.html',
+                        sub: null
+                    }
+                ]
+            },{
+                name: 'ตั้งค่าระบบ',
+                link: '#',
+                sub: [
+                    {
                         name: 'ระบบจัดการตารางเวลาส่งสินค้า',
                         link: '#',
                         sub: null
                     },{
                         name: 'กำหนดเวลาเดินรถ',
                         link: '#',
+                        sub: null
+                    },{
+                        name: 'PAYMENT GATEWAY',
+                        link: 'payment.html',
                         sub: null
                     }
                 ]
@@ -52,19 +90,15 @@ $(function () {
                         link: 'order_type.html',
                         sub: null
                     },{
-                        name: 'ประเภทสินค้า',
-                        link: 'product_type.html',
-                        sub: null
-                    },{
                         name: 'รถบรรทุกสินค้า',
                         link: 'truck.html',
                         sub: null
-                    },{
-                        name: 'PAYMENT GATEWAY',
-                        link: 'payment.html',
-                        sub: null
-                    }
+                    },
                 ]
+            },{
+                name: 'ออกจากระบบ',
+                link: '#',
+                sub: null
             }
         ]
     };

@@ -149,7 +149,7 @@
 
 					setTimeout(function(){
 						$body.addClass('sidebar-mini');
-						$btn.html('<i class="ti-arrow-right"></i>');
+						$btn.html('<i class="ti-arrow-left"></i>');
 
 						$sidebar_collapse.css('height','auto');
 						pdp.misc.sidebar_mini_active = true;
