@@ -10,18 +10,22 @@ $(function () {
                 link: '#',
                 sub: [
                     {
-                        name: 'คำสั่งซื้อ',
+                        name: 'รายการสั่งซื้อสินค้า',
                         link: 'order.html',
                         sub: null
                     },{
-                        name: 'ระบบบันทึกการส่งสินค้า',
-                        link: 'order_send.html',
+                        name: 'ฟอร์มสั่งซื้อสินค้า',
+                        link: 'order_form.html',
                         sub: null
                     },{
-                        name: 'ระบบจัดการสินค้า',
-                        link: 'product.html',
+                        name: 'รายการส่งสินค้า',
+                        link: 'send.html',
                         sub: null
-                    },
+                    },{
+                        name: 'ฟอร์มบันทึกการส่งสินค้า',
+                        link: 'order_send.html',
+                        sub: null
+                    }
                 ]
             },{
                 name: 'ระบบสมาชิก',
@@ -60,24 +64,6 @@ $(function () {
                     },{
                         name: 'ประเภทสินค้า',
                         link: 'product_type.html',
-                        sub: null
-                    }
-                ]
-            },{
-                name: 'ตั้งค่าระบบ',
-                link: '#',
-                sub: [
-                    {
-                        name: 'ระบบจัดการตารางเวลาส่งสินค้า',
-                        link: '#',
-                        sub: null
-                    },{
-                        name: 'กำหนดเวลาเดินรถ',
-                        link: '#',
-                        sub: null
-                    },{
-                        name: 'PAYMENT GATEWAY',
-                        link: 'payment.html',
                         sub: null
                     }
                 ]

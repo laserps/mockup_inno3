@@ -6,7 +6,7 @@
   <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>ระบบจัดการตารางเวลาส่งสินค้า</title>
+  <title>ตารางแสดงรายการส่งสินค้า</title>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
   <meta name="viewport" content="width=device-width">
 
@@ -58,7 +58,7 @@
             aria-controls="navbarItems" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" href="#">คำสั่งซื้อ</a>
+          <a class="navbar-brand" href="#">ตารางแสดงรายการส่งสินค้า</a>
         </div>
         <div class="collapse navbar-collapse" id="navbarItems">
           <ul class="nav navbar-nav ml-auto">
@@ -115,7 +115,7 @@
                       <div class="row">
                         <div class="col-md-6">
                           <label class="p-2">
-                            <b>ตารางแสดงรายการคำสั่งซื้อ</b>
+                            <b>ตารางแสดงรายการส่งสินค้า</b>
                           </label>
                         </div>
                         <div class="col-md-6">
@@ -129,41 +129,30 @@
                       <table id="example" class="display" style="width:100%">
                         <thead>
                           <tr>
-                            <label>
-                              <td class="text-center">
-                                <input type="checkbox">
-                              </td>
-                            </label>
+                            <th></th>
+                            <th class="text-center">
+                              <input type="checkbox">
+                            </th>
                             <th class="text-center">ลำดับ</th>
-                            <th class="text-center">เลขที่สั่งซื้อ</th>
-                            <th class="text-center">รายการสินค้า</th>
-                            <th class="text-center">จำนวนเงิน</th>
-                            <th class="text-center">ชื่อลูกค้า</th>
+                            <th class="text-center">เลขที่ใบส่งสินค้า</th>
+                            <th class="text-center">วันที่ส่งสินค้า</th>
                             <th class="text-center">สถานะ</th>
-                            <th class="text-center">วันที่สั่งซื้อ</th>
                             <th class="text-center"></th>
                           </tr>
                         </thead>
                         <tbody>
 
                           <tr v-for="item in items">
-                            <label>
-                              <td class="text-center">
-                                <input type="checkbox">
-                              </td>
-                            </label>
-                            <td class="text-center">{{item}}</td>
-                            <td class="text-center">OD1811000001</td>
+                            <td class="details-control">+</td>
                             <td class="text-center">
-                              <p>1.น้ำแข็งแห้ง (10km)</p>
-                              <p>2.น้ำแข็งแห้ง (10km)</p>
+                              <input type="checkbox">
                             </td>
-                            <td class="text-center">15,000</td>
-                            <td class="text-center">นายดิว เล่อร์</td>
+                            <td class="text-center">{{item}}</td>
+                            <td class="text-center">S0000000{{item}}</td>
+                            <td class="text-center">2018-11-01 00:00:00</td>
                             <td class="text-center">
                               <span class="badge badge-success">เสร็จสิ้น</span>
                             </td>
-                            <td class="text-center">2018-11-01 00:00:00</td>
                             <td class="text-center">
                               <button type="button" class="btn btn-warning">
                                 <i class="fas fa-edit"></i>
@@ -175,43 +164,21 @@
                           </tr>
 
                         </tbody>
-                        <tfoot>
-                          <tr>
-                            <th class="text-center"></th>
-                            <th class="text-center">ลำดับ</th>
-                            <th class="text-center">เลขที่สั่งซื้อ</th>
-                            <th class="text-center">รายการสินค้า</th>
-                            <th class="text-center">จำนวนเงิน</th>
-                            <th class="text-center">ชื่อลูกค้า</th>
-                            <th class="text-center">สถานะ</th>
-                            <th class="text-center">วันที่สั่งซื้อ</th>
-                            <th class="text-center"></th>
-                          </tr>
-                        </tfoot>
+
                       </table>
 
                       <br>
 
                       <div class="row">
-                        <div class="col-md-6">
-                          <div class="form-inline">
-                            <div class="select">
-                              <select class="form-control">
-                                <option>-- เลือกสถานะ --</option>
-                                <option>Option 1</option>
-                                <option>Option 2</option>
-                                <option>Option 3</option>
-                                <option>Option 4</option>
-                                <option>Option 5</option>
-                              </select>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-md-6">
+
+                        <div class="col-md-12">
                           <div class="form-inline pull-right">
-                            <button type="button" class="btn btn-default pull-right">ยกเลิกคำสั่งซื้อ</button>
+                            <a class="btn btn-default" style="width:150px;">บันทึก</a>
+                            &nbsp;&nbsp;
+                            <a class="btn btn-default">ยกเลิก</a>
                           </div>
                         </div>
+
                       </div>
 
                     </div>
@@ -280,8 +247,42 @@
   <script src="loadmenu.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
   <script>
+    function format ( d ) {
+      // `d` is the original data object for the row
+      return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">'+
+          '<tr>'+
+              '<td>Full name:</td>'+
+              '<td>example data 1</td>'+
+          '</tr>'+
+          '<tr>'+
+              '<td>Extension number:</td>'+
+              '<td>example data 2</td>'+
+          '</tr>'+
+          '<tr>'+
+              '<td>Extra info:</td>'+
+              '<td>And any further details here (images etc)...</td>'+
+          '</tr>'+
+      '</table>';
+    }
+
     $(document).ready(function () {
-      $('#example').DataTable();
+      var table = $('#example').DataTable();
+
+      $('#example tbody').on('click', 'td.details-control', function () {
+          var tr = $(this).closest('tr');
+          var row = table.row( tr );
+  
+          if ( row.child.isShown() ) {
+              // This row is already open - close it
+              row.child.hide();
+              tr.removeClass('shown');
+          }
+          else {
+              // Open this row
+              row.child( format(row.data()) ).show();
+              tr.addClass('shown');
+          }
+      })
     });
 
     var example1 = new Vue({
