@@ -136,11 +136,11 @@
                             <td class="text-center">
                               <input type="checkbox">
                             </td>
-                            <td class="text-center">{{item}}</td>
-                            <td class="text-center">S0000000{{item}}</td>
+                            <td class="text-center">{{item.id}}</td>
+                            <td class="text-center">S0000000{{item.id}}</td>
                             <td class="text-center">2018-11-01 00:00:00</td>
                             <td class="text-center">
-                              <span class="badge badge-success">เสร็จสิ้น</span>
+                              <p v-html="item.status"></p>
                             </td>
                             <td class="text-center">
                               <button type="button" class="btn btn-warning">
@@ -247,7 +247,18 @@
     var example1 = new Vue({
       el: '#example',
       data: {
-        items: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        items: [
+                {id:1 , status : '<span class="badge badge-success">เสร็จสิ้น</span>'}, 
+                {id:2 , status : '<span class="badge badge-success">เสร็จสิ้น</span>'},
+                {id:3 , status : '<span class="badge badge-success">เสร็จสิ้น</span>'},
+                {id:4 , status : '<span class="badge badge-success">เสร็จสิ้น</span>'},
+                {id:5 , status : '<span class="badge badge-warning">กำลังดำเนินการ</span>'},
+                {id:6 , status : '<span class="badge badge-warning">กำลังดำเนินการ</span>'},
+                {id:7 , status : '<span class="badge badge-warning">กำลังดำเนินการ</span>'},
+                {id:8 , status : '<span class="badge badge-info">รอขนส่ง</span>'},
+                {id:9 , status : '<span class="badge badge-info">รอขนส่ง</span>'}, 
+                {id:10 , status : '<span class="badge badge-info">รอขนส่ง</span>'}
+              ]
       }
     })
   </script>
