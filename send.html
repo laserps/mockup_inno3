@@ -226,7 +226,7 @@
   <script>
     function format(d) {
       // `d` is the original data object for the row
-      return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' + '<tr>' + '<th>รายการ</th>' + '<th>ขนาด</th>'+'<th>จำนวน</th>' + '<th>สถานที่ส่ง</th>' + '<th>วันที่/เวลา</th>' + '<th>สถานะการส่ง</th>'+ '</tr>' + '<tr>' + '<td>น้ำแข็งแห้ง(กระสอบ)</td>' + '<td>20กก./กระสอบ</td>' +'<td>10</td>' + '<td>อ.เมืองอยุธยา จ.อยุธยา</td>' + '<td>2019-01-31 09:00:00</td>' + '<td><a href="#" class="btn btn-success"><i class="fas fa-check"></i></a></td>'+ '</tr>' + '<tr>' + '<td>น้ำแข็งแห้ง(กระสอบ)</td>' + '<td>20กก./กระสอบ</td>' +'<td>10</td>' + '<td>อ.เมืองอยุธยา จ.อยุธยา</td>' + '<td>2019-01-31 09:00:00</td>' + '<td><a href="#" class="btn btn-success"><i class="fas fa-check"></i></a></td>'+ '</tr>' + '<tr>' + '<td>น้ำแข็งแห้ง(กระสอบ)</td>' + '<td>20กก./กระสอบ</td>' +'<td>10</td>' + '<td>อ.เมืองอยุธยา จ.อยุธยา</td>' + '<td>2019-01-31 09:00:00</td>' + '<td><a href="#" class="btn btn-danger"><i class="fas fa-remove"></i></a></td>'+ '</tr>' + '</table>';
+      return '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' + '<tr>' + '<th>รายการ</th>' + '<th>ขนาด</th>' + '<th>จำนวน</th>' + '<th>สถานที่ส่ง</th>' + '<th>วันที่/เวลา</th>' + '<th>สถานะการส่ง</th>' + '</tr>' + '<tr>' + '<td>น้ำแข็งแห้ง(กระสอบ)</td>' + '<td>20กก./กระสอบ</td>' + '<td>10</td>' + '<td>อ.เมืองอยุธยา จ.อยุธยา</td>' + '<td>2019-01-31 09:00:00</td>' + '<td><a href="#" class="btn btn-success"><i class="fas fa-check"></i></a></td>' + '</tr>' + '<tr>' + '<td>น้ำแข็งแห้ง(กระสอบ)</td>' + '<td>20กก./กระสอบ</td>' + '<td>10</td>' + '<td>อ.เมืองอยุธยา จ.อยุธยา</td>' + '<td>2019-01-31 09:00:00</td>' + '<td><a href="#" class="btn btn-success"><i class="fas fa-check"></i></a></td>' + '</tr>' + '<tr>' + '<td>น้ำแข็งแห้ง(กระสอบ)</td>' + '<td>20กก./กระสอบ</td>' + '<td>10</td>' + '<td>อ.เมืองอยุธยา จ.อยุธยา</td>' + '<td>2019-01-31 09:00:00</td>' + '<td><a href="#" class="btn btn-danger"><i class="fas fa-remove"></i></a></td>' + '</tr>' + '</table>';
     }
     $(document).ready(function() {
       var table = $('#example').DataTable();
@@ -247,18 +247,37 @@
     var example1 = new Vue({
       el: '#example',
       data: {
-        items: [
-                {id:1 , status : '<span class="badge badge-success">เสร็จสิ้น</span>'}, 
-                {id:2 , status : '<span class="badge badge-success">เสร็จสิ้น</span>'},
-                {id:3 , status : '<span class="badge badge-success">เสร็จสิ้น</span>'},
-                {id:4 , status : '<span class="badge badge-success">เสร็จสิ้น</span>'},
-                {id:5 , status : '<span class="badge badge-warning">กำลังดำเนินการ</span>'},
-                {id:6 , status : '<span class="badge badge-warning">กำลังดำเนินการ</span>'},
-                {id:7 , status : '<span class="badge badge-warning">กำลังดำเนินการ</span>'},
-                {id:8 , status : '<span class="badge badge-info">รอขนส่ง</span>'},
-                {id:9 , status : '<span class="badge badge-info">รอขนส่ง</span>'}, 
-                {id:10 , status : '<span class="badge badge-info">รอขนส่ง</span>'}
-              ]
+        items: [{
+          id: 1,
+          status: '<span class="badge badge-success">เสร็จสิ้น</span>'
+        }, {
+          id: 2,
+          status: '<span class="badge badge-success">เสร็จสิ้น</span>'
+        }, {
+          id: 3,
+          status: '<span class="badge badge-success">เสร็จสิ้น</span>'
+        }, {
+          id: 4,
+          status: '<span class="badge badge-success">เสร็จสิ้น</span>'
+        }, {
+          id: 5,
+          status: '<span class="badge badge-warning">กำลังดำเนินการ</span>'
+        }, {
+          id: 6,
+          status: '<span class="badge badge-warning">กำลังดำเนินการ</span>'
+        }, {
+          id: 7,
+          status: '<span class="badge badge-warning">กำลังดำเนินการ</span>'
+        }, {
+          id: 8,
+          status: '<span class="badge badge-info">รอขนส่ง</span>'
+        }, {
+          id: 9,
+          status: '<span class="badge badge-info">รอขนส่ง</span>'
+        }, {
+          id: 10,
+          status: '<span class="badge badge-info">รอขนส่ง</span>'
+        }]
       }
     })
   </script>
