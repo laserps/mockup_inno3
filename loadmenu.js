@@ -31,11 +31,11 @@ $(function () {
                         link: 'way.html',
                         sub: null
                     }
-                    ,{
-                        name: 'Google Multiple Route',
-                        link: 'google.html',
-                        sub: null
-                    }
+                    // ,{
+                    //     name: 'Google Multiple Route',
+                    //     link: 'google.html',
+                    //     sub: null
+                    // }
                 ]
             },{
                 name: 'ระบบสมาชิก',
