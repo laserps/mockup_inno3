@@ -40,11 +40,11 @@ $(function () {
                         link: 'order_send.html',
                         sub: null
                     },
-                    {
-                        name: 'เส้นทางการเดินรถ',
-                        link: 'way.html',
-                        sub: null
-                    }
+                    // {
+                    //     name: 'เส้นทางการเดินรถ',
+                    //     link: 'way.html',
+                    //     sub: null
+                    // }
                 ]
             },
             {
