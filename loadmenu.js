@@ -3,9 +3,10 @@ $(function () {
         menu: [
             {
                 name: 'เข้าสู่ระบบ',
-                link: 'login.html',
+                link: 'index.html',
                 sub: null
-            },{
+            },
+            {
                 name: 'Back Office',
                 link: '#',
                 sub: [
@@ -17,19 +18,6 @@ $(function () {
                         name: 'ฟอร์มสั่งซื้อสินค้า',
                         link: 'order_form.html',
                         sub: null
-                    },{
-                        name: 'รายการส่งสินค้า',
-                        link: 'send.html',
-                        sub: null
-                    },{
-                        name: 'ฟอร์มบันทึกการส่งสินค้า',
-                        link: 'order_send.html',
-                        sub: null
-                    }
-                    ,{
-                        name: 'เส้นทางการเดินรถ',
-                        link: 'way.html',
-                        sub: null
                     }
                     // ,{
                     //     name: 'Google Multiple Route',
@@ -37,15 +25,38 @@ $(function () {
                     //     sub: null
                     // }
                 ]
-            },{
-                name: 'ระบบสมาชิก',
+            },
+            {
+                name: 'ระบบการส่งสินค้า',
                 link: '#',
                 sub: [
                     {
-                        name: 'แก้ไขข้อมูลส่วนตัว',
-                        link: 'editprofile.html',
+                        name: 'รายการส่งสินค้า',
+                        link: 'send.html',
                         sub: null
-                    },{
+                    },
+                    {
+                        name: 'ฟอร์มบันทึกการส่งสินค้า',
+                        link: 'order_send.html',
+                        sub: null
+                    },
+                    {
+                        name: 'เส้นทางการเดินรถ',
+                        link: 'way.html',
+                        sub: null
+                    }
+                ]
+            },
+            {
+                name: 'ระบบสมาชิก',
+                link: '#',
+                sub: [
+                    // {
+                    //     name: 'แก้ไขข้อมูลส่วนตัว',
+                    //     link: 'editprofile.html',
+                    //     sub: null
+                    // },
+                    {
                         name: 'ระบบจัดการกลุ่มผู้ใช้งาน',
                         link: 'user_group.html',
                         sub: null
