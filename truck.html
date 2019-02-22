@@ -122,6 +122,7 @@
                         <table id="example" class="display" style="width:100%">
                           <thead>
                             <tr>
+                              <th></th>
                               <th class="text-center">ลำดับ</th>
                               <th class="text-center">ยี่ห้อ</th>
                               <th class="text-center">รุ่น</th>
@@ -134,6 +135,7 @@
                           </thead>
                           <tbody>
                             <tr v-for="n in 10">
+                              <td class="text-center details-control"><i class="fa fa-plus btn btn-xs btn-success" aria-hidden="true"></i></i></td>
                               <td class="text-center">{{n}}</td>
                               <th class="text-center">OD0000{{n}}</th>
                               <th class="text-center">Dmax</th>
@@ -217,8 +219,51 @@
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
   <script>
+    function format(d) {
+      // `d` is the original data object for the row
+      return `<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px; width:100%;">
+        <tr>
+            <th>ลำดับ</th>
+            <th>ชื่อ</th>
+            <th>นามสกุล</th>
+            <th>เบอร์โทร</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>คุณอิภิรักษ์</td>
+            <td>จักรวงศ์</td>
+            <td>089-5551524</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>คุณอิภิรักษ์</td>
+            <td>จักรวงศ์</td>
+            <td>089-5551524</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>คุณอิภิรักษ์</td>
+            <td>จักรวงศ์</td>
+            <td>089-5551524</td>
+        </tr>
+    </table>`;
+    }
+    
     $(document).ready(function () {
-      $('#example').DataTable();
+      var table = $('#example').DataTable();
+      $('#example tbody').on('click', 'td.details-control', function () {
+        var tr = $(this).closest('tr');
+        var row = table.row(tr);
+        if (row.child.isShown()) {
+          // This row is already open - close it
+          row.child.hide();
+          tr.removeClass('shown');
+        } else {
+          // Open this row
+          row.child( format( row.data() ) ).show();
+          tr.addClass('shown');
+        }
+      })
     });
 
     new Vue({
