@@ -189,7 +189,7 @@
               <div class="card">
                 <form method="#" action="#">
                   <div class="header">
-                    <h4 class="title">
+                    <h4 class="title fa-pull-left">
                       ประวัติการเติมเครดิต : นายทองดี ดีลเลอร์
                     </h4>
                   </div>
@@ -228,51 +228,106 @@
             <!--  end col-lg-8  -->
             <div class="col-lg-4">
               <div class="card">
-                  <div class="header">
-                    <h4 class="title">
-                      ยอดคงเหลือ : 25,000
-                    </h4>
-                    <a href="#">ตรวจสอบประวัติการสั่งซื้อสินค้า</a>                  
-                  </div>
+                <div class="header">
+                  <h4 class="title">
+                    ยอดคงเหลือ : 25,000
+                  </h4>
+                  <a href="#">ตรวจสอบประวัติการสั่งซื้อสินค้า</a>
+                </div>
               </div>
 
-              <div class="card">
-                <form method="#" action="#">
-                  <div class="header">
-                    <h4 class="title">
-                      เครดิต
-                    </h4>
+              <div>
+                <div class="card">
+                  <a data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <div class="card-header" id="headingOne">
+                      <h5 class="mb-0">
+                        เครดิต
+                        <i class="fas fa-angle-down pull-right"></i>
+                      </h5>
+                    </div>
+                  </a>
+
+                  <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                      <div class="content">
+
+                        <i class="fab fa-cc-visa" style="color:navy;"></i>
+                        <i class="fab fa-cc-mastercard" style="color:red;"></i>
+
+                        <div class="form-group">
+                          <label for="cname">Card Number</label>
+                          <input class="form-control" type="text" placeholder="xxxx xxxx xxxx xxxx">
+                        </div>
+
+                        <div class="form-group">
+                          <label for="cname">Name on Card</label>
+                          <input class="form-control" type="text" placeholder="Firstname Lastname">
+                        </div>
+
+                        <div class="form-group">
+                          <label for="expyear">Expire Date</label>
+                          <input class="form-control" type="text" placeholder="12/18">
+                        </div>
+
+                        <div class="form-group">
+                          <label for="cvv">CVV</label>
+                          <input class="form-control" type="text" placeholder="xxx">
+                        </div>
+
+                        <button type="submit" class="btn btn-fill btn-default">บันทึก</button>
+
+                      </div>
+                    </div>
                   </div>
-                  <div class="content">
-
-                    <i class="fab fa-cc-visa" style="color:navy;"></i>
-                    <i class="fab fa-cc-mastercard" style="color:red;"></i>
-
-                    <div class="form-group">
-                      <label for="cname">Card Number</label>
-                      <input class="form-control" type="text" placeholder="xxxx xxxx xxxx xxxx">
-                    </div>
-
-                    <div class="form-group">
-                      <label for="cname">Name on Card</label>
-                      <input class="form-control" type="text" placeholder="Firstname Lastname">
-                    </div>
-
-                    <div class="form-group">
-                      <label for="expyear">Expire Date</label>
-                      <input class="form-control" type="text" placeholder="12/18">
-                    </div>
-
-                    <div class="form-group">
-                      <label for="cvv">CVV</label>
-                      <input class="form-control" type="text" placeholder="xxx">
-                    </div>
-
-                    <button type="submit" class="btn btn-fill btn-default">บันทึก</button>
-
-                  </div>
-                </form>
+                </div>
               </div>
+
+              <div>
+                  <div class="card">
+                    <a data-toggle="collapse" data-target="#collapsetwo" aria-expanded="true" aria-controls="collapseOne">
+                      <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                          แจ้งโอนเงิน
+                          <i class="fas fa-angle-down pull-right"></i>
+                        </h5>
+                      </div>
+                    </a>
+  
+                    <div id="collapsetwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                      <div class="card-body">
+                        <div class="content">
+  
+                          <i class="fab fa-cc-visa" style="color:navy;"></i>
+                          <i class="fab fa-cc-mastercard" style="color:red;"></i>
+  
+                          <div class="form-group">
+                            <label for="cname">Card Number</label>
+                            <input class="form-control" type="text" placeholder="xxxx xxxx xxxx xxxx">
+                          </div>
+  
+                          <div class="form-group">
+                            <label for="cname">Name on Card</label>
+                            <input class="form-control" type="text" placeholder="Firstname Lastname">
+                          </div>
+  
+                          <div class="form-group">
+                            <label for="expyear">Expire Date</label>
+                            <input class="form-control" type="text" placeholder="12/18">
+                          </div>
+  
+                          <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input class="form-control" type="text" placeholder="xxx">
+                          </div>
+  
+                          <button type="submit" class="btn btn-fill btn-default">บันทึก</button>
+  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               <!-- end card -->
             </div>
           </div>
