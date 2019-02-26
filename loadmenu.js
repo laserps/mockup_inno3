@@ -3,10 +3,15 @@ $(function () {
         menu: [
             {
                 name: 'เข้าสู่ระบบ',
+<<<<<<< HEAD
                 link: 'login.html',
                 icon: 'ti-user',
+=======
+                link: 'index.html',
+>>>>>>> 5edcac5e30c042c8008fca5f4aa91d57d07244ee
                 sub: null
-            },{
+            },
+            {
                 name: 'Back Office',
                 link: '#',
                 sub: [
@@ -18,35 +23,45 @@ $(function () {
                         name: 'ฟอร์มสั่งซื้อสินค้า',
                         link: 'order_form.html',
                         sub: null
-                    },{
-                        name: 'รายการส่งสินค้า',
-                        link: 'send.html',
-                        sub: null
-                    },{
-                        name: 'ฟอร์มบันทึกการส่งสินค้า',
-                        link: 'order_send.html',
-                        sub: null
                     }
-                    ,{
-                        name: 'เส้นทางการเดินรถ',
-                        link: 'way.html',
-                        sub: null
-                    }
-                    ,{
-                        name: 'Google Multiple Route',
-                        link: 'google.html',
-                        sub: null
-                    }
+                    // ,{
+                    //     name: 'Google Multiple Route',
+                    //     link: 'google.html',
+                    //     sub: null
+                    // }
                 ]
-            },{
-                name: 'ระบบสมาชิก',
+            },
+            {
+                name: 'ระบบการส่งสินค้า',
                 link: '#',
                 sub: [
                     {
-                        name: 'แก้ไขข้อมูลส่วนตัว',
-                        link: 'editprofile.html',
+                        name: 'รายการส่งสินค้า',
+                        link: 'send.html',
                         sub: null
-                    },{
+                    },
+                    {
+                        name: 'ฟอร์มบันทึกการส่งสินค้า',
+                        link: 'order_send.html',
+                        sub: null
+                    },
+                    // {
+                    //     name: 'เส้นทางการเดินรถ',
+                    //     link: 'way.html',
+                    //     sub: null
+                    // }
+                ]
+            },
+            {
+                name: 'ระบบสมาชิก',
+                link: '#',
+                sub: [
+                    // {
+                    //     name: 'แก้ไขข้อมูลส่วนตัว',
+                    //     link: 'editprofile.html',
+                    //     sub: null
+                    // },
+                    {
                         name: 'ระบบจัดการกลุ่มผู้ใช้งาน',
                         link: 'user_group.html',
                         sub: null
@@ -103,13 +118,6 @@ $(function () {
     var str = "";
     $.each(data.menu, function (key, value) {
 
-        // <li class="d-flex flex-column active">
-        //     <a class="nav-link" href="../widgets/widgets.html">
-        //         <i class="nav-icon fas fa-cog"></i>
-        //         <p>Widgets</p>
-        //     </a>
-        // </li>
-
         if (value.sub == null) {
             str +=
                 `<li class="d-flex flex-column">
@@ -121,18 +129,18 @@ $(function () {
         } else {
             str +=
                 `<li class="d-flex flex-column">
-                    <a class="nav-link" href="#tables` + key + `" aria-expanded="true" class="nav-link" data-toggle="collapse">
+                    <a class="nav-link" href="#tables` + key + `" aria-expanded="false" class="nav-link" data-toggle="collapse">
                         <i class="nav-icon fas fa-cogs"></i>
                         <p>` + value.name + `
                             <i class="fa fa-sort-desc submenu-toggle"></i>
                         </p>
                     </a>
-                    <div class="collapse show" id="tables` + key + `" role="navigation" aria-expanded="true">
+                    <div class="collapse show" id="tables` + key + `" role="navigation" aria-expanded="false">
                         <ul class="nav flex-column ps-container ps-theme-default">`
             $.each(value.sub, function (keyin, valuein) {
                 str +=
                             `<li class="d-flex flex-column">
-                                <a class="nav-link" href="` + valuein.link + `"><i class="far fas fa-cog"></i> ` + valuein.name + `</a>
+                                <a class="nav-link" href="` + valuein.link + `">` + valuein.name + `</a>
                             </li>`;
             });
             str += `    </ul>
@@ -144,3 +152,19 @@ $(function () {
     $("#menu").append(str);
     str = null;
 });
+
+$(document).ready(function() {
+
+    $('#minimizeSidebar').click(function () { 
+        var tgc = $("#minimizeSidebar").find("li");
+        if(tgc.length=="ti-arrow-left"){
+            $(".collapse").removeClass("show");
+            tgc.removeClass("ti-arrow-left");
+            tgc.addClass("ti-arrow-right");
+        }else{
+            $(".collapse").removeClass("show");
+            tgc.removeClass("ti-arrow-right");
+            tgc.addClass("ti-arrow-left");
+        }
+    });
+})

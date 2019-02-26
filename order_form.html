@@ -121,6 +121,8 @@
                             <label>วันที่สั่ง</label>
                             <input class="form-control" type="date">
                           </div>
+
+                          <div class="col-lg-2"></div>
                           
                           <div class="col-lg-2">
                             <div class="form-group">
@@ -143,14 +145,14 @@
                                 </select>
                               </div>
                           </div>
-                          <div class="col-lg-2">
+                          <!-- <div class="col-lg-2">
                               <div class="form-group">
                                   <label>เลือกที่อยู่สำหรับจัดส่ง</label>
-                                  <select id="address" class="form-control">
+                                  <select class="form-control address">
                                     <option v-for="address in addresses">address {{address}}</option>
                                   </select>
                               </div>
-                          </div>
+                          </div> -->
                         </div>
                         <hr>
                         <div class="row">
@@ -165,6 +167,7 @@
                                     <th class="text-center">ขนาด</th>
                                     <th class="text-center">จำนวน</th>
                                     <th class="text-center">ราคา</th>
+                                    <th class="text-center">สถานที่จัดส่ง</th>
                                     <th class="text-center"></th>
                                 </tr>
                               </thead>
@@ -176,9 +179,9 @@
                                     <th class="text-center">รวม</th>
                                     <th class="text-center">{{total}}</th>
                                     <th class="text-center"></th>
+                                    <th class="text-center"></th>
                                 </tr>
                               </tfoot>
-
                               <tbody>
                                 <tr v-for="item in items">
                                   <td class="text-center">{{item}}</td>
@@ -186,6 +189,13 @@
                                   <td>20กก./กระสอบ</td>
                                   <td><input type="text" v-bind:value="item"></td>
                                   <td class="text-center">{{(item*1000)}}</td>
+                                  <td>
+                                    <div class="form-group">
+                                        <select class="address">
+                                          <option v-for="n in 5">address {{n}}</option>
+                                        </select>
+                                    </div>
+                                  </td>
                                   <td><a href="#" class="text-danger"><i class="fas fa-remove"></i></a></td>
                                 </tr>
                                 <tr>
@@ -194,6 +204,7 @@
                                   <td><input type="text"></td>
                                   <td><input type="text"></td>
                                   <td><input type="text"></td>
+                                  <td></td>
                                   <td></td>
                                 </tr>
                               </tbody>
@@ -317,15 +328,19 @@
       }
     });
     let address = new Vue({
-      el: '#address',
+      el: '.address',
       data: {
         // items: [1,2,3,4,5,6,7,8,9,10]
         addresses: [1,2,3,4,5]
       }
     });
 
+    new Vue({
+      el:"table"
+    })
+
     $('#customer').select2();
-    $('#address').select2();
+    $('.address').select2();
   </script>
 </body>
 

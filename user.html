@@ -125,6 +125,7 @@
                               <th class="text-center">ลำดับ</th>
                               <th class="text-center">ชื่อผู้ใช้งาน</th>
                               <th class="text-center">ชื่อ-นามสกุล</th>
+                              <th class="text-center">เบอร์โทร</th>
                               <th class="text-center">อีเมล</th>
                               <th class="text-center">กลุ่มผู่ใช้งาน</th>
                               <th class="text-center">ทีม</th>
@@ -134,77 +135,14 @@
                             </tr>
                           </thead>
                           <tbody>
-                            <tr>
-                              <td class="text-center">1</td>
+                            <tr v-for="n in 10">
+                              <td class="text-center">{{n}}</td>
                               <td class="text-center">ผู้ใช้งาน</td>
                               <td class="text-center">ชื่อ-นามสกุล</td>
-                              <td class="text-center">mail@mail.com</td>
+                              <td class="text-center">09-1516-110{{(n-1)}}</td>
+                              <td class="text-center">mail{{n}}@mail.com</td>
                               <td class="text-center">แอดมิน</td>
-                              <td class="text-center">A</td>
-                              <td class="text-center">
-                                <span class="badge badge-primary">ใช้งาน</span>
-                              </td>
-                              <td class="text-center">2018-11-01 00:00:00</td>
-                              <td class="text-center">
-                                <button type="button" class="btn btn-warning">แก้ไข</button>
-                                <button type="button" class="btn btn-danger">ลบรายการ</button>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">2</td>
-                              <td class="text-center">ผู้ใช้งาน</td>
-                              <td class="text-center">ชื่อ-นามสกุล</td>
-                              <td class="text-center">mail@mail.com</td>
-                              <td class="text-center">แอดมิน</td>
-                              <td class="text-center">B</td>
-                              <td class="text-center">
-                                <span class="badge badge-primary">ใช้งาน</span>
-                              </td>
-                              <td class="text-center">2018-11-01 00:00:00</td>
-                              <td class="text-center">
-                                <button type="button" class="btn btn-warning">แก้ไข</button>
-                                <button type="button" class="btn btn-danger">ลบรายการ</button>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">3</td>
-                              <td class="text-center">ผู้ใช้งาน</td>
-                              <td class="text-center">ชื่อ-นามสกุล</td>
-                              <td class="text-center">mail@mail.com</td>
-                              <td class="text-center">ผุ้ใช้งานทั่วไป</td>
-                              <td class="text-center">C</td>
-                              <td class="text-center">
-                                <span class="badge badge-danger">ยกเลิกการใช้งาน</span>
-                              </td>
-                              <td class="text-center">2018-11-01 00:00:00</td>
-                              <td class="text-center">
-                                <button type="button" class="btn btn-warning">แก้ไข</button>
-                                <button type="button" class="btn btn-danger">ลบรายการ</button>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">4</td>
-                              <td class="text-center">ผู้ใช้งาน</td>
-                              <td class="text-center">ชื่อ-นามสกุล</td>
-                              <td class="text-center">mail@mail.com</td>
-                              <td class="text-center">ผุ้ใช้งานทั่วไป</td>
-                              <td class="text-center">D</td>
-                              <td class="text-center">
-                                <span class="badge badge-primary">ใช้งาน</span>
-                              </td>
-                              <td class="text-center">2018-11-01 00:00:00</td>
-                              <td class="text-center">
-                                <button type="button" class="btn btn-warning">แก้ไข</button>
-                                <button type="button" class="btn btn-danger">ลบรายการ</button>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td class="text-center">5</td>
-                              <td class="text-center">ผู้ใช้งาน</td>
-                              <td class="text-center">ชื่อ-นามสกุล</td>
-                              <td class="text-center">mail@mail.com</td>
-                              <td class="text-center">ผุ้ใช้งานทั่วไป</td>
-                              <td class="text-center">E</td>
+                              <td class="text-center">A{{n}}</td>
                               <td class="text-center">
                                 <span class="badge badge-primary">ใช้งาน</span>
                               </td>
@@ -223,6 +161,7 @@
                                 <th class="text-center">ลำดับ</th>
                                 <th class="text-center">ชื่อผู้ใช้งาน</th>
                                 <th class="text-center">ชื่อ-นามสกุล</th>
+                                <th class="text-center">เบอร์โทร</th>
                                 <th class="text-center">อีเมล</th>
                                 <th class="text-center">กลุ่มผู่ใช้งาน</th>
                                 <th class="text-center">ทีม</th>
@@ -293,10 +232,17 @@
   <!-- Datatable Bootstrap4 -->
   <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
   <script src="loadmenu.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+
   <script>
     $(document).ready(function () {
       $('#example').DataTable();
     });
+
+    new Vue({
+      el:'#example'
+    })
   </script>
   <pingendo onclick="window.open('https://pingendo.com/', '_blank')" style="cursor:pointer;position: fixed;bottom: 20px;right:20px;padding:4px;background-color: #00b0eb;border-radius: 8px; width:220px;display:flex;flex-direction:row;align-items:center;justify-content:center;font-size:14px;color:white">Made with Pingendo Free&nbsp;&nbsp;
     <img src="https://pingendo.com/site-assets/Pingendo_logo_big.png" class="d-block" alt="Pingendo logo" height="16">
