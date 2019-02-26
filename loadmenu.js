@@ -3,13 +3,9 @@ $(function () {
         menu: [
             {
                 name: 'เข้าสู่ระบบ',
-<<<<<<< HEAD
                 link: 'login.html',
                 icon: 'ti-user',
-=======
                 link: 'index.html',
->>>>>>> 5edcac5e30c042c8008fca5f4aa91d57d07244ee
-                sub: null
             },
             {
                 name: 'Back Office',
