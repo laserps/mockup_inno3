@@ -4,6 +4,7 @@ $(function () {
             {
                 name: 'เข้าสู่ระบบ',
                 link: 'login.html',
+                icon: 'ti-user',
                 sub: null
             },{
                 name: 'Back Office',
