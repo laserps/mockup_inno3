@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>แก้ไขข้อมูลส่วนตัว</title>
+  <title>ระบบจัดการสินค้า</title>
 
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'>
   <meta name="viewport" content="width=device-width">
@@ -19,7 +19,7 @@
   <link href="assets/css/inspire.css" rel="stylesheet">
 
   <!--  CSS for Demo Purpose, don't include it in your project     -->
-  <link href="assets/css/demo.css" rel="stylesheet">
+  
 
   <!--     Fonts and icons     -->
   <link href="assets/css/font-awesome.min.css" rel="stylesheet">
@@ -63,7 +63,7 @@
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" href="#">แก้ไขข้อมูลส่วนตัว</a>
+          <a class="navbar-brand" href="#">ระบบจัดการสินค้า</a>
         </div>
         <div class="collapse navbar-collapse" id="navbarItems">
           <ul class="nav navbar-nav ml-auto">
@@ -110,201 +110,86 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-12">
-              <div class="row">
-              <!-- start form left -->
-              <div class="col-md-2">
-                
-              </div>
-              <div class="col-md-8">
-                <div class="card">
-                  <div class="card-header">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <label class="p-2">
-                          <b>ข้อมูลส่วนตัว</b>
-                        </label>
-                      </div>
+              <div class="card">
+                <div class="card-header">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <label class="p-2">
+                        <b>ระบบจัดการสินค้า</b>
+                      </label>
                     </div>
-                  </div>
-                  <div class="card-body p-2">
-                    <div class="widget p-25 row">
-                      <div class="widget-body col-md-12">
-                        <div class="form-group row">
-                          <div class="col-md-1"></div>
-                          <label class="col-md-1 col-form-label">ชื่อผู้ใช้งาน</label>
-                          <div class="col-md-3">
-                            <input type="text" class="form-control" name="" value="">
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <div class="col-md-1"></div>
-                          <label class="col-md-1 col-form-label">ชื่อ</label>
-                          <div class="col-md-3">
-                            <input type="text" class="form-control" name="" value="">
-                          </div>
-                          <div class="col-md-1"></div>
-                          <label class="col-md-1 col-form-label">นามสกุล</label>
-                          <div class="col-md-3">
-                            <input type="text" class="form-control" name="" value="">
-                          </div>
-                        </div>
-                        <div class="form-group row">
-                          <div class="col-md-1"></div>
-                          <label class="col-md-1 col-form-label">อีเมล</label>
-                          <div class="col-md-3">
-                            <input type="text" class="form-control" name="" value="">
-                          </div>
-                          <div class="col-md-1"></div>
-                          <label class="col-md-1 col-form-label">เบอร์โทร</label>
-                          <div class="col-md-3">
-                            <input type="text" class="form-control" name="" value="">
-                          </div>
-                        </div>
-                      </div>
+                    <div class="col-md-6">
+                      <label class="p-2 pull-right">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                          <i class="fa fa-plus"></i>
+                        </button>
+                      </label>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-md-2"></div>
-              <!-- end form left -->
 
-              <!-- start form right -->
-              <div class="col-md-2"></div>
-              <div class="col-md-8">
-                <div class="card">
-                  <div class="card-header">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <label class="p-2">
-                          <b>ที่อยู่</b>
-                        </label>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="text-right col-md-12">
-                          <button type="button" class="btn btn-primary" name="button">
-                            <i class="fa fa-plus-circle" aria-hidden="true"></i>
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-body p-2">
-                    <div class="row">
-                      <div class="widget-body col-md-6">
-                        <div class="select col-md-12">
-                          <strong>ที่อยู่ 1</strong>
-                          <button class="btn btn-sm btn-warning pull-right">
-                            <i class="fas fa-edit"></i>
-                          </button>
-                          <hr>
-                          <div class="row">
-                            <div class="col-sm-6 p-1">
-                              <p>เลขที่</p>
-                              <p>แขวง/ตำบล</p>
-                              <p>เขต/อำเภอ</p>
-                              <p>จังหวัด</p>
-                              <p>ปณ.</p>
-                            </div>
-                            <div class="col-sm-6 p-1">
-                              <p>999</p>
-                              <p>วงศ์สว่าง</p>
-                              <p>บางซื่อ</p>
-                              <p>กทมฯ</p>
-                              <p>10800</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="widget-body col-md-6">
-                        <div class="select col-md-12">
-                          <strong>ที่อยู่ 2</strong>
-                          <button class="btn btn-sm btn-warning pull-right">
-                            <i class="fas fa-edit"></i>
-                          </button>
-                          <hr>
-                          <div class="row">
-                            <div class="col-sm-6 p-1">
-                              <p>เลขที่</p>
-                              <p>แขวง/ตำบล</p>
-                              <p>เขต/อำเภอ</p>
-                              <p>จังหวัด</p>
-                              <p>ปณ.</p>
-                            </div>
-                            <div class="col-sm-6 p-1">
-                              <p>999</p>
-                              <p>วงศ์สว่าง</p>
-                              <p>บางซื่อ</p>
-                              <p>กทมฯ</p>
-                              <p>10800</p>
-                            </div>
-                          </div>
-                        </div>
+                <div class="card-body p-2">
+                  <form>
+                    <div class="form-group">
+                      <table class="table" style="width:100%;" id="example">
+                        <thead>
+                          <tr>
+                            <th class="text-center">ลำดับ</th>
+                            <th class="text-center">รูป</th>
+                            <th class="text-center">รายการ</th>
+                            <th class="text-center">ขนาด</th>
+                            <th class="text-center">ราคา</th>
+                            <th class="text-center">คงเหลือ</th>
+                            <th class="text-center">สถานะ</th>
+                            <th class="text-center"></th>
+                          </tr>
+                        </thead>
+                        <tfoot>
+                          <tr>
+                            <th class="text-center">ลำดับ</th>
+                            <th class="text-center">รูป</th>
+                            <th class="text-center">รายการ</th>
+                            <th class="text-center">ขนาด</th>
+                            <th class="text-center">ราคา</th>
+                            <th class="text-center">คงเหลือ</th>
+                            <th class="text-center">สถานะ</th>
+                            <th class="text-center"></th>
+                          </tr>
+                        </tfoot>
+                        <tbody>
+                          <tr v-for="n in 10">
+                            <td class="text-center">{{n}}</td>
+                            <td class="text-center">
+                              <img src="http://campus.sanook.com/story_picture/m/02675_002.jpg" width="100px">
+                            </td>
+                            <td>ICE0000{{(n-1)}}  น้ำแข็งแห้ง(กระสอบ)</td>
+                            <td>2{{(n-1)}} กก./กระสอบ</td>
+                            <td>500</td>
+                            <td>200 กระสอบ</td>
+                            <td class="text-center">
+                              <span class="badge badge-success">ใช้งาน</span>
+                            </td>
+                            <td class="text-center">
+                              <button type="button" class="btn btn-warning">
+                                <i class="fas fa-edit"></i>
+                              </button>
+                              <button type="button" class="btn btn-danger">
+                                <i class="fas fa-trash"></i>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      <br>
+                      <div class="pull-right">
+                        <button class="btn btn-primary">บันทึก</button>
+                        <button class="btn btn-danger">ยกเลิก</button>
                       </div>
                     </div>
-                    <div class="row">
-                        <div class="widget-body col-md-6">
-                          <div class="select col-md-12">
-                            <strong>ที่อยู่ 3</strong>
-                            <button class="btn btn-sm btn-warning pull-right">
-                              <i class="fas fa-edit"></i>
-                            </button>
-                            <hr>
-                            <div class="row">
-                              <div class="col-sm-6 p-1">
-                                <p>เลขที่</p>
-                                <p>แขวง/ตำบล</p>
-                                <p>เขต/อำเภอ</p>
-                                <p>จังหวัด</p>
-                                <p>ปณ.</p>
-                              </div>
-                              <div class="col-sm-6 p-1">
-                                <p>999</p>
-                                <p>วงศ์สว่าง</p>
-                                <p>บางซื่อ</p>
-                                <p>กทมฯ</p>
-                                <p>10800</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="widget-body col-md-6">
-                          <div class="select col-md-12">
-                            <strong>ที่อยู่ 4</strong>
-                            <button class="btn btn-sm btn-warning pull-right">
-                              <i class="fas fa-edit"></i>
-                            </button>
-                            <hr>
-                            <div class="row">
-                              <div class="col-sm-6 p-1">
-                                <p>เลขที่</p>
-                                <p>แขวง/ตำบล</p>
-                                <p>เขต/อำเภอ</p>
-                                <p>จังหวัด</p>
-                                <p>ปณ.</p>
-                              </div>
-                              <div class="col-sm-6 p-1">
-                                <p>999</p>
-                                <p>วงศ์สว่าง</p>
-                                <p>บางซื่อ</p>
-                                <p>กทมฯ</p>
-                                <p>10800</p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <hr>
-                      <div class="form-group row">
-                        <label class="col-md-4 col-form-label"></label>
-                        <div class="col-md-8">
-                          <button type="button" class="pull-right btn btn-success" name="button">บันทึก</button>
-                        </div>
-                      </div>
-                  </div>
+                  </form>
                 </div>
               </div>
-              <!-- end form right -->
-            </div>
             </div>
           </div>
         </div>
@@ -378,7 +263,7 @@
                 </div>
               </div>
             </fieldset>
-
+            
           </div>
         </div>
         <div class="modal-footer">
@@ -421,7 +306,7 @@
   <script src="assets/vendors/nouislider.min.js"></script>
   <!--  Google Maps Plugin    -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAurmSUEQDwY86-wOG3kCp855tCI8lHL-I"></script>
-  <!-- Plugin -->
+  <!-- Select Plugin -->
   <script src="assets/vendors/jquery.select-bootstrap.js"></script>
 
   <!--  Checkbox, Radio, Switch and Tags Input Plugins -->
@@ -442,8 +327,20 @@
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="assets/js/demo.js"></script>
 
+  <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"></script>
   <script src="loadmenu.js"></script>
 
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.6/dist/vue.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('#example').DataTable();
+    });
+
+    new Vue({
+      el : '#example'
+    })
+  </script>
 </body>
 
 </html>

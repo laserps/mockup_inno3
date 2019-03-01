@@ -37,6 +37,11 @@ $(function () {
                         sub: null
                     },
                     {
+                        name: 'ดูแผนที่การส่งสินค้า',
+                        link: 'google.html',
+                        sub: null
+                    },
+                    {
                         name: 'ฟอร์มบันทึกการส่งสินค้า',
                         link: 'order_send.html',
                         sub: null
@@ -52,11 +57,11 @@ $(function () {
                 name: 'ระบบสมาชิก',
                 link: '#',
                 sub: [
-                    // {
-                    //     name: 'แก้ไขข้อมูลส่วนตัว',
-                    //     link: 'editprofile.html',
-                    //     sub: null
-                    // },
+                    {
+                        name: 'แก้ไขข้อมูลส่วนตัว',
+                        link: 'editprofile.html',
+                        sub: null
+                    },
                     {
                         name: 'ระบบจัดการกลุ่มผู้ใช้งาน',
                         link: 'user_group.html',
@@ -76,16 +81,8 @@ $(function () {
                 link: '#',
                 sub: [
                     {
-                        name: 'ระบบจัดการสินค้า',
-                        link: 'product.html',
-                        sub: null
-                    },{
                         name: 'ระบบตรวจสอบยอดเข้าออกสินค้า',
                         link: 'product_transaction.html',
-                        sub: null
-                    },{
-                        name: 'ประเภทสินค้า',
-                        link: 'product_type.html',
                         sub: null
                     }
                 ]
@@ -93,6 +90,21 @@ $(function () {
                 name: 'ข้อมูลพื้นฐาน',
                 link: '#',
                 sub: [
+                    {
+                        name: 'ระบบจัดการสินค้า',
+                        link: 'product.html',
+                        sub: null
+                    },
+                    {
+                        name: 'ฟอร์มเพิ่มสินค้า',
+                        link: 'add_product.html',
+                        sub: null
+                    },
+                    {
+                        name: 'ประเภทสินค้า',
+                        link: 'product_type.html',
+                        sub: null
+                    },
                     {
                         name: 'ประเภทคำสั่งซื้อ',
                         link: 'order_type.html',

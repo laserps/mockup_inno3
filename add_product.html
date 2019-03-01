@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>ระบบจัดการสินค้า</title>
+  <title>ฟอร์มเพิ่มสินค้า</title>
 
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'>
   <meta name="viewport" content="width=device-width">
@@ -63,7 +63,7 @@
             aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a class="navbar-brand" href="#">ระบบจัดการสินค้า</a>
+          <a class="navbar-brand" href="#">ฟอร์มเพิ่มสินค้า</a>
         </div>
         <div class="collapse navbar-collapse" id="navbarItems">
           <ul class="nav navbar-nav ml-auto">
@@ -109,85 +109,64 @@
       <div class="">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
               <div class="card">
                 <div class="card-header">
                   <div class="row">
                     <div class="col-md-6">
                       <label class="p-2">
-                        <b>ระบบจัดการสินค้า</b>
-                      </label>
-                    </div>
-                    <div class="col-md-6">
-                      <label class="p-2 pull-right">
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                          <i class="fa fa-plus"></i>
-                        </button>
+                        <b>ฟอร์มเพิ่มสินค้า</b>
                       </label>
                     </div>
                   </div>
                 </div>
-
-                <div class="card-body p-2">
-                  <form>
-                    <div class="form-group">
-                      <table class="table" style="width:100%;" id="example">
-                        <thead>
-                          <tr>
-                            <th class="text-center">ลำดับ</th>
-                            <th class="text-center">รูป</th>
-                            <th class="text-center">รายการ</th>
-                            <th class="text-center">ขนาด</th>
-                            <th class="text-center">ราคา</th>
-                            <th class="text-center">คงเหลือ</th>
-                            <th class="text-center">สถานะ</th>
-                            <th class="text-center"></th>
-                          </tr>
-                        </thead>
-                        <tfoot>
-                          <tr>
-                            <th class="text-center">ลำดับ</th>
-                            <th class="text-center">รูป</th>
-                            <th class="text-center">รายการ</th>
-                            <th class="text-center">ขนาด</th>
-                            <th class="text-center">ราคา</th>
-                            <th class="text-center">คงเหลือ</th>
-                            <th class="text-center">สถานะ</th>
-                            <th class="text-center"></th>
-                          </tr>
-                        </tfoot>
-                        <tbody>
-                          <tr v-for="n in 10">
-                            <td class="text-center">{{n}}</td>
-                            <td class="text-center">
-                              <img src="http://campus.sanook.com/story_picture/m/02675_002.jpg" width="100px">
-                            </td>
-                            <td>ICE0000{{(n-1)}}  น้ำแข็งแห้ง(กระสอบ)</td>
-                            <td>2{{(n-1)}} กก./กระสอบ</td>
-                            <td>500</td>
-                            <td>200 กระสอบ</td>
-                            <td class="text-center">
-                              <span class="badge badge-success">ใช้งาน</span>
-                            </td>
-                            <td class="text-center">
-                              <button type="button" class="btn btn-warning">
-                                <i class="fas fa-edit"></i>
-                              </button>
-                              <button type="button" class="btn btn-danger">
-                                <i class="fas fa-trash"></i>
-                              </button>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <br>
-                      <div class="pull-right">
-                        <button class="btn btn-primary">บันทึก</button>
-                        <button class="btn btn-danger">ยกเลิก</button>
-                      </div>
+                <div class="row pt-3">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-1">รูปภาพ</div>
+                  <div class="col-3">
+                    <input type="" name="" class="form-control">
+                  </div>
+                  <div class="col-md-1">
+                    <button class="btn btn-info">อัพโหลด</button>
+                  </div>
+                </div>
+                <div class="row pt-3">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-1">รายการ</div>
+                  <div class="col-8">
+                    <input type="" name="" class="form-control" style="height: 60px;">
+                  </div>
+                </div>
+                <div class="row pt-3">
+                  <div class="col-md-1"></div>
+                  <div class="col-md-1">ขนาด</div>
+                  <div class="col-3">
+                    <input type="" name="" class="form-control">
+                  </div>
+                  <div class="col-md-2 text-right">ราคา</div>
+                  <div class="col-3">
+                    <input type="" name="" class="form-control">
+                  </div>
+                </div>
+                <div class="row pt-3">
+                  <div class="col-md-2 text-right">กลุ่มผู้ใช้งาน/ทีม</div>
+                  <div class="col-3">
+                    <input type="" name="" class="form-control">
+                  </div>
+                  <div class="col-md-1">
+                    <button class="btn btn-info"><i class="fa fa-plus"></i></button>
+                  </div>
+                </div>
+                
+                <div class="content">
+                  <br><hr>
+                  <div class="row">
+                    <div class="col-md-12 text-right">
+                      <a href="" class="btn btn-success">บันทึก</a>
+                      <a href="" class="btn btn-danger">ยกเลิก</a>
                     </div>
-                  </form>
+                  </div>
                 </div>
               </div>
             </div>
