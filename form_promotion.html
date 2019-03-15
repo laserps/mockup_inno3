@@ -150,14 +150,29 @@
                         <h5>เพิ่มสินค้า</h5>
                     </div>
                     <hr>
-                    <div class="col-lg-3">
-                        <select class="custom-select" multiple>
-                            <option selected>Open this select menu</option>
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                        </select>
-                    </div>
+                    <div class="row">
+                          <div class="col-xs-5">
+                            <select name="from" id="multiselect" class="form-control" multiple="multiple">
+                              <option value="1">C++</option>
+                              <option value="2">C#</option>
+                              <option value="3">Haskell</option>
+                              <option value="4">Java</option>
+                              <option value="5">JavaScript</option>
+                              <option value="6">Lisp</option>
+                            </select>
+                          </div>
+                          <div class="col-xs-2">
+                            <button type="button" id="multiselect_rightAll" class="btn btn-primary"><i class="fa fa-forward"></i></button>
+                            <button type="button" id="multiselect_rightSelected" class="btn btn-block"><i class="fa fa-chevron-right"></i></button>
+                            <button type="button" id="multiselect_leftSelected" class="btn btn-block"><i class="fa fa-chevron-left"></i></button>
+                            <button type="button" id="multiselect_leftAll" class="btn btn-primary"><i class="fa fa-backward"></i></button>
+                          </div>
+                          <div class="col-xs-5">
+                            <select name="to" id="multiselect_to" class="form-control" size="8" multiple="multiple">
+                                
+                            </select>
+                          </div>
+                        </div>
                 </div>
             </div>
             <div class="card">
@@ -349,7 +364,45 @@
 
   <script src="loadmenu.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+  <script src="js/multiselect.js"></script>
+
   <script>
+    $('#multiselect').change(function() {
+      console.log($(this).val());
+    });
+
+    $('#multiselect_rightAll').click(function() {
+      var options = $('#multiselect').html();
+      console.log(options);
+      $('#multiselect_to').append(options);
+      $('#multiselect').html('');
+      // $.each($('#multiselect').val(), function(k, v) {
+      //   $('#multiselect_to').append()
+      // });
+    });
+    $('#multiselect_leftAll').click(function() {
+      var option = $('#multiselect_to').html();
+      console.log(option);
+      $('#multiselect').append(option);
+      $('#multiselect_to').html('');
+    });
+    $('#multiselect_rightSelected').click(function(){
+      var data = $('#multiselect').val();
+      $.each(data, function(k, v) {
+        var removeTag = $('#multiselect').find('option[value="'+v+'"]');
+        $('#multiselect_to').append(removeTag.clone());
+        removeTag.remove();
+      });
+    });
+    $('#multiselect_leftSelected').click(function(){
+      var data = $('#multiselect_to').val();
+      $.each(data, function(k, v) {
+        var removeTag = $('#multiselect_to').find('option[value="'+v+'"]');
+        $('#multiselect').append(removeTag.clone());
+        removeTag.remove();
+      });
+    });
+
     $(document).ready(function () {
       $('#example').DataTable();
     });
