@@ -66,17 +66,20 @@ $(function () {
                         name: 'ระบบจัดการกลุ่มผู้ใช้งาน',
                         link: 'user_group.html',
                         sub: null
-                    },{
+                    },
+                    {
                         name: 'ระบบจัดการผู้ใช้งาน',
                         link: 'user.html',
                         sub: null
-                    },{
+                    },
+                    {
                         name: 'ระบบเติมเครดิต',
                         link: 'payment.html',
                         sub: null
                     }
                 ]
-            },{
+            },
+            {
                 name: 'ระบบจัดการสินค้า',
                 link: '#',
                 sub: [
@@ -86,7 +89,51 @@ $(function () {
                         sub: null
                     }
                 ]
-            },{
+            },
+            {
+                name: 'Profile',
+                link: '',
+                sub: [
+                    {
+                        name: 'ข้อมูลลูกค้า',
+                        link: 'customer.html',
+                        sub: null
+                    },
+                    {
+                        name: 'ประวัติการสั่งซื้อ',
+                        link: 'history.html',
+                        sub: null
+                    },
+                    {
+                        name: 'แต้มส่วนลด',
+                        link: 'point.html',
+                        sub: null
+                    },
+                    {
+                        name: 'ประวัติการรับแต้ม',
+                        link: 'history_point.html',
+                        sub: null
+                    }
+                ]
+            },
+            {
+                name: 'โปรโมชั่น',
+                link: '',
+                sub: [
+                    {
+                        name: 'รายการโปรโมชั่น',
+                        link: 'promotion.html',
+                        sub: null
+                    },
+                    {
+                        name: 'ฟอร์มโปรโมชั่น',
+                        link: 'form_promotion.html',
+                        sub: null
+                    }
+                ]
+
+            },
+            {
                 name: 'ข้อมูลพื้นฐาน',
                 link: '#',
                 sub: [
@@ -115,7 +162,8 @@ $(function () {
                         sub: null
                     },
                 ]
-            },{
+            },
+            {
                 name: 'ออกจากระบบ',
                 link: '#',
                 sub: null
