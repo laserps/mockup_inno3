@@ -149,19 +149,17 @@
                         <thead>
                           <tr>
                             <th class="text-center">ลำดับ</th>
-                            <th class="text-center">รหัสที่แลก</th>
+                            <th class="text-center">Order no.</th>
+                            <th class="text-center">รหัสแต้ม</th>
                             <th class="text-center">วันที่แลก</th>
-                            <th class="text-center">สถานะการใช้งาน</th>
                           </tr>
                         </thead>
                         <tbody>
                           <tr v-for="item in items">
                             <td class="text-center">{{item.id}}</td>
+                            <td class="text-center">S0000000{{item.id}}</td>
                             <td class="text-center">P0000{{item.id}}</td>
                             <td class="text-center">2018-11-01</td>
-                            <td class="text-center">
-                                <span class="badge" v-bind:class="item.icon">{{item.status}}</span>
-                            </td>
                           </tr>
                         </tbody>
                       </table>

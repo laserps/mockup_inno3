@@ -141,7 +141,8 @@
                           <tr>
                             <th class="text-center">ลำดับ</th>
                             <th class="text-center">Order no.</th>
-                            <th class="text-center">ประเภทการรับแต้ม</th>
+                            <th class="text-center">รหัสแต้ม</th>
+                            <th class="text-center">ที่มาของแต้ม</th>
                             <th class="text-center">วันที่บันทึกรายการ</th>
                           </tr>
                         </thead>
@@ -149,6 +150,7 @@
                           <tr v-for="item in items">
                             <td class="text-center">{{item.id}}</td>
                             <td class="text-center">S0000000{{item.id}}</td>
+                            <td class="text-center">P0000{{item.id}}</td>
                             <td class="text-center">first login</td>
                             <td class="text-center">2018-11-01 00:00:00</td>
                           </tr>
